@@ -49,8 +49,8 @@ const Category = ({ data }) => {
 
   return (
     <Layout seo={seo}>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
+      <div className="">
+        <div className="">
           <h1>{category}</h1>
           <ArticlesComponent articles={articles} />
         </div>

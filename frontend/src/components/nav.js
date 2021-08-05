@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
-
 const Nav = () => (
   <StaticQuery
     query={graphql`
@@ -19,37 +18,36 @@ const Nav = () => (
       }
     `}
     render={(data) => (
-      <div>
-        <div>
-          <nav className="uk-navbar-container" data-uk-navbar>
-            <div className="uk-navbar-left">
-              <ul className="uk-navbar-nav">
-                <li>
-                  <Link to="/">{data.strapiGlobal.siteName}</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="uk-navbar-right">
-              <button
-                className="uk-button uk-button-default uk-margin-right"
-                type="button"
-              >
-                Categories
-              </button>
-              <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-                <ul className="uk-nav uk-dropdown-nav">
-                  {data.allStrapiCategory.edges.map((category, i) => (
-                    <li key={`category__${category.node.slug}`}>
-                      <Link to={`/category/${category.node.slug}`}>
-                        {category.node.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
+      <div className="navbar__wrapper navbar__background border shadow-sm fixed-top">
+        <nav className="container h-100 d-flex justify-content-between align-items-center">
+          <div className="w-100 d-flex align-items-center">
+            <Link className="navbar__link" to="/">
+              {data.strapiGlobal.siteName}
+            </Link>
+          </div>
+          <div className="w-100">
+            <ul
+              className="d-flex justify-content-end mb-0 navbar__ul__format"
+              style={{ gap: "2rem" }}
+            >
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Who I am</a>
+              </li>
+              <li>
+                <a href="#">Skills</a>
+              </li>
+              <li>
+                <a href="#">Experience</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     )}
   />
