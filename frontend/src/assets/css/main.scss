@@ -23,12 +23,12 @@ h3,
 h4,
 h5 {
   color: $color-black;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
   font-size: 50px;
   font-weight: 500;
-  font-family: "Open Sans", sans-serif;
 }
 
 h4 {
@@ -44,6 +44,29 @@ ul {
   list-style: none;
 }
 
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.gap-sm {
+  gap: 0.8rem;
+}
+
+.gap-md {
+  gap: 2rem;
+}
+.gap-l {
+  gap: 3rem;
+}
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.border-left {
+  border-left: 1px solid #dee2e6 !important;
+}
+
 .navbar__link {
   color: $color-secondary;
   text-transform: uppercase;
@@ -55,7 +78,7 @@ ul {
 }
 
 .navbar__background {
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
 .navbar__ul__format {
@@ -82,6 +105,12 @@ ul {
 
 .main__bottom__background {
   min-height: 100vh;
+}
+
+.main__image__background {
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .main__wrapper {
@@ -129,8 +158,8 @@ ul {
   justify-content: center;
   gap: 2rem;
   img {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   #react {
     -webkit-animation: spin 10s linear infinite;
@@ -153,6 +182,33 @@ ul {
       }
     }
   }
+}
+
+.skills__border__card {
+  border-radius: 20px;
+}
+
+.skills__top__icons {
+  font-size: 3rem;
+  color: $color-primary;
+}
+.skills__format {
+  color: $color-black;
+  h6 {
+    color: $color-secondary;
+  }
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-black;
+  }
+  p {
+    font-weight: 300;
+  }
+}
+
+.parragraph__l {
+  font-size: 1.2rem;
 }
 
 #category {
