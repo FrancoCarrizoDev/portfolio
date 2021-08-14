@@ -5,6 +5,11 @@ import "../assets/css/main.scss";
 
 import { Presentation } from "../components/presentation";
 import { Skills } from "../components/skills";
+import { Experience } from "../components/experience";
+import { Footer } from "../components/footer";
+
+import { Projects } from "../components/projects";
+import { Prefooter } from "../components/prefooter";
 const IndexPage = () => {
   const data = useStaticQuery(query);
 
@@ -12,14 +17,11 @@ const IndexPage = () => {
     <Layout seo={data.strapiHomepage.seo}>
       <Presentation />
       <Skills />
-      <div
-        className="mt-5"
-        style={{
-          minHeight: "30vh",
-          width: "100%",
-          backgroundColor: "#2a9d8f",
-        }}
-      ></div>
+      <Experience />
+      <hr />
+      <Projects />
+      <Prefooter />
+      <Footer />
     </Layout>
   );
 };

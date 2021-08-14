@@ -1,0 +1,64 @@
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 300vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $color-black;
+  font-family: "Open Sans", sans-serif;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-weight-extrabold {
+  font-weight: 800;
+}
+
+.font-weight-black {
+  font-weight: 900;
+}
+
+.gap-sm {
+  gap: 0.8rem;
+}
+
+.gap-md {
+  gap: 2rem;
+}
+.gap-l {
+  gap: 3rem;
+}
+
+.text-color-white {
+  color: $color-white;
+}

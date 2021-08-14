@@ -9,17 +9,19 @@ import sql from "../assets/images/logos/sql-server.svg";
 
 export const Presentation = () => {
   return (
-    <div className="main__bottom__background pb-5">
-      <div className="main__image__background">
-        <div className="main__wrapper container triangulo-equilatero-bottom-left">
-          <div className="">
-            <h1 className="text-center">Full-Stack Developer & Tutor</h1>
-            <h4 className="text-center">
+    <div className="presentation__bottom__background ">
+      <div className="presentation__bottom__background__image__background">
+        <div className="presentation__bottom__background__wrapper container">
+          <div className="pt-5">
+            <h1 className="text-center font-weight-bold pb-3">
+              Full-Stack Developer & Bot Camp School
+            </h1>
+            <h5 className="text-center font-weight-light">
               I analyze, code and solve problems in the development world
-            </h4>
-            <div className="mt-5 mx-auto main__logos__container">
-              <img src={js} alt="" />
+            </h5>
+            <div className="mt-5 mx-auto presentation__bottom__background__logos__container">
               <img src={sass} alt="" />
+              <img src={js} alt="" />
               <img src={react} alt="" id="react" />
               <img src={node} alt="" />
               <img src={sql} alt="" />
@@ -28,10 +30,10 @@ export const Presentation = () => {
           </div>
         </div>
       </div>
-      <div className="main__avatar__container">
+      <div className="presentation__bottom__background__avatar__container d-flex justify-content-center">
         <img src={avatar} alt="foto de avatar" className="avatar" />
       </div>
-      <div className="main__myDescription__container">
+      <div className="presentation__bottom__background__myDescription__container">
         <div>
           <h3 className="text-center ">Hi, I’m Franco. Nice to meet you.</h3>
           <p className="text-center">
