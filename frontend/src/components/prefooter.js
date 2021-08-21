@@ -9,12 +9,12 @@ export const Prefooter = () => {
   return (
     <div className="pt-5 mt-5 row d-flex flex-column justify-content-center">
       <div className="col-12 ">
-        <h3
-          className="text-center font-weight-bold
+        <h4
+          className="text-center 
         "
         >
-          This portfolio was built with JAMSTACK
-        </h3>
+          This portfolio was built with jamstack
+        </h4>
       </div>
       <div className="col-12 row d-flex align-items-center justify-content-evenly prefooter">
         <img

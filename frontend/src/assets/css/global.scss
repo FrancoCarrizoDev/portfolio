@@ -1,6 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   min-height: 300vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -61,4 +68,14 @@ p {
 
 .text-color-white {
   color: $color-white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.circle-icon {
+  background: black;
+  padding: 0.5rem;
+  border-radius: 50%;
 }

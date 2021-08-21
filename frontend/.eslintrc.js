@@ -1,39 +1,27 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'es2021': true,
-        'node': true
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
     },
-    'extends': [
-        'eslint:recommended',
-        'plugin:react/recommended'
+    ecmaVersion: 12,
+    sourceType: 'module'
+  },
+  plugins: ['react'],
+  rules: {
+    'linebreak-style': [
+      'error',
+      `${process.env.OS === 'Windows_NT' ? 'windows' : 'unix'}`
     ],
-    'parserOptions': {
-        'ecmaFeatures': {
-            'jsx': true
-        },
-        'ecmaVersion': 12,
-        'sourceType': 'module'
-    },
-    'plugins': [
-        'react'
-    ],
-    'rules': {
-        'indent': [
-            'error',
-            4
-        ],
-        'linebreak-style': [
-            'error',
-            'windows'
-        ],
-        'quotes': [
-            'error',
-            'single'
-        ],
-        'semi': [
-            'error',
-            'never'
-        ]
-    }
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    'no-tabs': ['error', { allowIndentationTabs: true }],
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js'] }]
+  }
 }

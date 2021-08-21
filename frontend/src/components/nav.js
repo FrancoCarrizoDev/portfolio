@@ -1,20 +1,26 @@
-import React, { useState, useLayoutEffect } from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
+import React, { useState, useLayoutEffect } from 'react'
+import { Link, StaticQuery, graphql } from 'gatsby'
+import {
+  Navbar,
+  Nav as NavBootstrap,
+  Container,
+  NavDropdown
+} from 'react-bootstrap'
 const Nav = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+    const position = window.pageYOffset
+    setScrollPosition(position)
+  }
 
   useLayoutEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollPosition]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrollPosition])
 
   return (
     <StaticQuery
@@ -36,10 +42,45 @@ const Nav = () => {
       render={(data) => (
         <div
           className={`navbar__wrapper navbar__background fixed-top ${
-            scrollPosition > 1 ? "bg-white border shadow-sm" : ""
+            scrollPosition > 1 ? 'bg-white border shadow-sm' : ''
           }`}
         >
-          <nav className="container h-100 d-flex justify-content-around align-items-center">
+          <Navbar bg="light" expand="lg">
+            <Container>
+              <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <NavBootstrap className="me-auto">
+                  <NavBootstrap.Link href="#home">Home</NavBootstrap.Link>
+                  <NavBootstrap.Link href="#link">Link</NavBootstrap.Link>
+                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">
+                      Action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">
+                      Something
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">
+                      Separated link
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </NavBootstrap>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </div>
+      )}
+    />
+  )
+}
+
+export default Nav
+
+/*<nav className="container h-100 d-flex justify-content-around align-items-center">
             <div className="w-100 d-flex align-items-center">
               <Link className="navbar__link" to="/">
                 {data.strapiGlobal.siteName}
@@ -67,11 +108,4 @@ const Nav = () => {
                 </li>
               </ul>
             </div>
-          </nav>
-        </div>
-      )}
-    />
-  );
-};
-
-export default Nav;
+          </nav> */
