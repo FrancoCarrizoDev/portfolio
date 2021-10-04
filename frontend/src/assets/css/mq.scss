@@ -1,0 +1,71 @@
+@media only screen and (max-width: 1600px) {
+  .avatar {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .avatar {
+    width: 8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation__bottom__background__logos__container {
+    img {
+      max-width: 2.8rem;
+    }
+  }
+  .avatar {
+    width: 10rem;
+  }
+  .border-md-y {
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .presentation__bottom__background__myDescription__container div {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 556px) {
+  .presentation__bottom__background__logos__container {
+    img {
+      max-width: 2.5rem;
+    }
+  }
+  .presentation__bottom__background {
+    margin-top: 70px;
+  }
+  .presentation__bottom__background__avatar__container {
+    padding-bottom: 3rem;
+  }
+  .skills__container {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .presentation__bottom__background__logos__container {
+    img {
+      max-width: 2.5rem;
+    }
+  }
+  .skills__container {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .presentation__bottom__background {
+    margin-top: 50px;
+  }
+  .presentation__bottom__background__avatar__container {
+    padding-bottom: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .presentation__bottom__background__avatar__container {
+    padding-bottom: 0rem;
+  }
+}

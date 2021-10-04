@@ -40,39 +40,40 @@ const Nav = () => {
         }
       `}
       render={(data) => (
-        <div
-          className={`navbar__wrapper navbar__background fixed-top ${
-            scrollPosition > 1 ? 'bg-white border shadow-sm' : ''
-          }`}
+        <Navbar
+          bg="white"
+          expand="lg"
+          fixed="top"
+          className={`${scrollPosition > 0 ? 'border' : ''} py-4`}
         >
-          <Navbar bg="light" expand="lg">
-            <Container>
-              <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <NavBootstrap className="me-auto">
-                  <NavBootstrap.Link href="#home">Home</NavBootstrap.Link>
-                  <NavBootstrap.Link href="#link">Link</NavBootstrap.Link>
-                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
-                      Action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Something
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                      Separated link
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </NavBootstrap>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </div>
+          <Container>
+            <Navbar.Brand href="#home">
+              <Link className="navbar__link" to="/">
+                <small>{data.strapiGlobal.siteName}</small>
+              </Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav " className="flex-grow-0">
+              <NavBootstrap>
+                <NavBootstrap.Link className="navbar__link" href="#home">
+                  <small>Home</small>
+                </NavBootstrap.Link>
+                <NavBootstrap.Link className="navbar__link" href="#link">
+                  <small>Skills</small>
+                </NavBootstrap.Link>
+                <NavBootstrap.Link className="navbar__link" href="#link">
+                  <small>Experience</small>
+                </NavBootstrap.Link>
+                <NavBootstrap.Link className="navbar__link" href="#link">
+                  <small>Projects</small>
+                </NavBootstrap.Link>
+                <NavBootstrap.Link className="navbar__link" href="#link">
+                  <small>Contact</small>
+                </NavBootstrap.Link>
+              </NavBootstrap>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
       )}
     />
   )

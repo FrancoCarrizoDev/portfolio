@@ -2,13 +2,23 @@
   "collectionName": "components_decoration_heroes",
   "info": {
     "name": "Hero",
-    "icon": "address-card"
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
       "required": true
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "greeting": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

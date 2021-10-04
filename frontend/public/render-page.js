@@ -3090,7 +3090,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "28fa62e8f0df87822482c7d5ad91bed0"
+    "cacheDigest": "c824e8e6b2f767522be43f9bd93ad693"
   }
 }, {
   name: 'gatsby-plugin-offline',

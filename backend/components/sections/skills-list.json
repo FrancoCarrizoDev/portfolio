@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_skills_lists",
+  "info": {
+    "name": "skillsList",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

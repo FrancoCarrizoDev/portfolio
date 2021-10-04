@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react'
 
-import avatar from "../assets/images/cartoonAvatar.png";
-import react from "../assets/images/logos/atomic-structure.svg";
-import node from "../assets/images/logos/nodejs.svg";
-import js from "../assets/images/logos/javascript.svg";
-import sass from "../assets/images/logos/sass.svg";
-import sql from "../assets/images/logos/sql-server.svg";
+import avatar from '../assets/images/cartoonAvatar.png'
+import react from '../assets/images/logos/atomic-structure.svg'
+import node from '../assets/images/logos/nodejs.svg'
+import js from '../assets/images/logos/javascript.svg'
+import sass from '../assets/images/logos/sass.svg'
+import sql from '../assets/images/logos/sql-server.svg'
 
-export const Presentation = () => {
+export const Presentation = ({ presentation }) => {
   return (
-    <div className="presentation__bottom__background ">
-      <div className="presentation__bottom__background__image__background">
-        <div className="presentation__bottom__background__wrapper container">
-          <div className="pt-5">
+    <div className="presentation__bottom__background pt-5">
+      <div className="presentation__bottom__background__image__background ">
+        <div className="pb-5 container">
+          <div className="py-5">
             <h1 className="text-center font-weight-bold pb-3">
-              Full-Stack Developer & Bot Camp School
+              {presentation.title}
             </h1>
             <h5 className="text-center font-weight-light">
-              I analyze, code and solve problems in the development world
+              {presentation.subTitle}
             </h5>
-            <div className="mt-5 mx-auto presentation__bottom__background__logos__container">
+            <div className="mt-5 mx-auto presentation__bottom__background__logos__container pb-3">
               <img src={sass} alt="" />
               <img src={js} alt="" />
               <img src={react} alt="" id="react" />
@@ -34,18 +34,11 @@ export const Presentation = () => {
         <img src={avatar} alt="foto de avatar" className="avatar" />
       </div>
       <div className="presentation__bottom__background__myDescription__container">
-        <div>
-          <h3 className="text-center ">Hi, I’m Franco. Nice to meet you.</h3>
-          <p className="text-center">
-            Since beginning my journey as a freelance designer nearly 10 years
-            ago, I've done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create digital products for
-            both business and consumer use. I'm quietly confident, naturally
-            curious, and perpetually working on improving my chops one design
-            problem at a time.
-          </p>
+        <div className="py-5">
+          <h3 className="text-center ">{presentation.greeting}</h3>
+          <p className="text-justify">{presentation.description}</p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

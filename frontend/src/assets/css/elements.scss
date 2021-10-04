@@ -4,20 +4,12 @@
 
 .border-left {
   border-left: 1px solid #dee2e6 !important;
-}
+} //TODO esto esta mal
 
 .navbar__link {
-  color: $color-secondary;
+  color: $color-secondary !important;
   text-transform: uppercase;
   font-weight: 300;
-}
-
-.navbar__wrapper {
-  padding: 2rem 0rem;
-}
-
-.navbar__background {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar__ul__format {
@@ -36,29 +28,11 @@
 }
 
 .avatar {
-  vertical-align: middle;
   width: 12rem;
-  height: 12rem;
   border-radius: 50%;
 }
 
-// .presentation__bottom__background__bottom__background {
-//   min-height: 100vh;
-// }
-
-// .presentation__bottom__background__image__background {
-//   background-image: url(../images/background.jpg);
-//   background-position: center;
-//   background-size: cover;
-// }
-
-.presentation__bottom__background__wrapper {
-  padding-top: 7rem;
-  height: 50vh;
-}
-
 .presentation__bottom__background__avatar__container {
-  margin-bottom: -15px;
   width: 100%;
   img {
     margin: 0 auto;
@@ -67,13 +41,13 @@
 
 .presentation__bottom__background__myDescription__container {
   background-color: $color-secondary;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   div {
     margin: 0 auto;
     width: 50%;
     min-height: 30vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     h3 {
@@ -91,11 +65,11 @@
 
 .presentation__bottom__background__logos__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   img {
     max-width: 3rem;
-    max-height: 3rem;
   }
   #react {
     -webkit-animation: spin 10s linear infinite;
@@ -121,7 +95,7 @@
 }
 
 .skills__wrapper {
-  background: linear-gradient(#2a9d8f 30%, #fff 0%);
+  background: linear-gradient($color-secondary 30%, #fff 0%);
 }
 
 .skills__border__card {
