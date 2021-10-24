@@ -11,7 +11,7 @@ export const Skills = ({ skills }) => {
             {skills.title}
           </h3>
         </div>
-        <div className="border shadow-sm skills__border__card  skills__format row skills__container">
+        <div className="border shadow-sm skills__border__card rounded skills__format row skills__container">
           {skills.skillList.map((skill, i) => (
             <div
               className={`col-12 col-md-4 d-flex flex-column align-items-center p-5 gap-sm skills__format  ${
